@@ -1,0 +1,50 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+@* Welcome header and main call-to-action *@
+<div class="text-center mt-4 mb-4">
+    <h1>Welcome to Medical Journey Log</h1>
+    <p class="lead">Select a child to begin tracking their medical journey.</p>
+    <a class="btn btn-success" asp-page="/LogChild">Add a Child</a>
+</div>
+
+@* Conditional: If there are children in the system, display them as cards *@
+@if (Model.Children.Any())
+{
+    <div class="row">
+        @foreach (var child in Model.Children)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+
+                        @* Child's name as card title *@
+                        <h5 class="card-title">@child.Name</h5>
+
+                        @* Display date of birth if available *@
+                        @if (child.DateOfBirth.HasValue)
+                        {
+                            <p class="card-text">
+                                <small>Date of Birth: @child.DateOfBirth.Value.ToString("MMMM dd, yyyy")</small>
+                            </p>
+                        }
+
+                        @* Button to view that child’s full detail page *@
+                        <a class="btn btn-outline-primary" asp-page="/ChildDetails" asp-route-id="@child.Id">View Details</a>
+
+                        @* Future placeholder for adding Milestone/Appointment links *@
+                        <!-- Future: Add buttons for Milestones, Appointments -->
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    @* Display this if no children have been added yet *@
+    <p class="text-center">No children have been added yet.</p>
+}

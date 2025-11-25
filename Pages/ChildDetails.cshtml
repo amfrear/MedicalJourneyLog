@@ -1,0 +1,70 @@
+﻿@page "{id:int}"
+@model MedicalJourneyLog.Pages.ChildDetailsModel
+@{
+    ViewData["Title"] = "Child Details";
+}
+
+<div class="container mt-4">
+    <h2>@Model.Child.Name</h2>
+
+    <div class="mb-3">
+        <a asp-page="/EditChild" asp-route-id="@Model.Child.Id" class="btn btn-outline-primary btn-sm">Edit Child</a>
+        <a asp-page="/DeleteChild" asp-route-id="@Model.Child.Id" class="btn btn-outline-danger btn-sm ms-2">Delete Child</a>
+    </div>
+
+    <p>
+        <strong>Date of Birth:</strong>
+        @Model.Child.DateOfBirth?.ToString("MMMM dd, yyyy")
+    </p>
+
+    <a class="btn btn-primary mb-3"
+       asp-page="/LogSymptom"
+       asp-route-childId="@Model.Child.Id">
+        Log New Symptom
+    </a>
+
+    <h4>Symptoms</h4>
+
+    @if (Model.Child.Symptoms != null && Model.Child.Symptoms.Any())
+    {
+        <ul class="list-group">
+            @foreach (var symptom in Model.Child.Symptoms)
+            {
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <strong>@symptom.Name</strong>
+                            @if (!string.IsNullOrWhiteSpace(symptom.Description))
+                            {
+                                <div class="text-muted">@symptom.Description</div>
+                            }
+                        </div>
+                        <div class="text-end">
+                            <time datetime="@symptom.DateLogged.ToString("o")">
+                                @symptom.DateLogged.ToString("MMMM dd, yyyy h:mm tt")
+                            </time>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 d-flex gap-2">
+                        <a asp-page="/EditSymptom"
+                           asp-route-id="@symptom.Id"
+                           class="btn btn-outline-primary btn-sm">Edit</a>
+
+                        <form method="post"
+                              asp-page="/DeleteSymptom"
+                              asp-route-id="@symptom.Id"
+                              onsubmit="return confirm('Delete this symptom?');"
+                              class="d-inline">
+                            <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No symptoms recorded yet.</p>
+    }
+</div>

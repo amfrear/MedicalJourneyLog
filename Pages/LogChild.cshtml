@@ -1,0 +1,31 @@
+﻿@page
+@model MedicalJourneyLog.Pages.LogChildModel
+@{
+    ViewData["Title"] = "Log a Child";
+}
+
+<h2>Log a Child</h2>
+
+<form method="post">
+    <!-- Show model-level validation errors -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Child.Name" class="form-label"></label>
+        <input asp-for="Child.Name" class="form-control" />
+        <span asp-validation-for="Child.Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Child.DateOfBirth" class="form-label"></label>
+        <input asp-for="Child.DateOfBirth" type="date" class="form-control" />
+        <span asp-validation-for="Child.DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="/Index" class="btn btn-secondary ms-2">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

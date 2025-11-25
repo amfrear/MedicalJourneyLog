@@ -1,0 +1,26 @@
+@page "{id:int}"
+@model MedicalJourneyLog.Pages.DeleteSymptomModel
+@{
+    ViewData["Title"] = "Delete Symptom";
+}
+
+<h2>Delete Symptom</h2>
+
+<div class="mb-3">
+    <strong>Name:</strong> @Model.Symptom.Name <br />
+    <strong>Description:</strong> @(string.IsNullOrWhiteSpace(@Model.Symptom.Description) ? "—" : @Model.Symptom.Description) <br />
+    <strong>Date Logged:</strong> @Model.Symptom.DateLogged.ToString("yyyy-MM-dd HH:mm")
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Symptom.Id" />
+    <button type="submit" class="btn btn-danger"
+            onclick="return confirm('Delete this symptom?');">
+        Delete
+    </button>
+    <a asp-page="/ChildDetails" asp-route-id="@Model.Symptom.ChildId" class="btn btn-secondary ms-2">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

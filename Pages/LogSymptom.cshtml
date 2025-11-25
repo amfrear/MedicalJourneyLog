@@ -1,0 +1,48 @@
+﻿@page
+@model MedicalJourneyLog.Pages.LogSymptomModel
+@{
+    ViewData["Title"] = "Log a Symptom";
+}
+
+<h2>Log a Symptom</h2>
+
+<form method="post">
+    <!-- Show model-level validation errors -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label for="childSelect" class="form-label">Child</label>
+        <select asp-for="Symptom.ChildId"
+                asp-items="Model.ChildrenOptions"
+                id="childSelect"
+                class="form-select">
+            <option value="">-- Select Child --</option>
+        </select>
+        <span asp-validation-for="Symptom.ChildId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Symptom.Name" class="form-label"></label>
+        <input asp-for="Symptom.Name" class="form-control" />
+        <span asp-validation-for="Symptom.Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Symptom.Description" class="form-label"></label>
+        <textarea asp-for="Symptom.Description" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Symptom.Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Symptom.DateLogged" class="form-label"></label>
+        <input asp-for="Symptom.DateLogged" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Symptom.DateLogged" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="/Index" class="btn btn-secondary ms-2">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

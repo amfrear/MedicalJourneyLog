@@ -1,0 +1,36 @@
+@page "{id:int}"
+@model MedicalJourneyLog.Pages.EditSymptomModel
+@{
+    ViewData["Title"] = "Edit Symptom";
+}
+
+<h2>Edit Symptom</h2>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Symptom.Name" class="form-label"></label>
+        <input asp-for="Symptom.Name" class="form-control" />
+        <span asp-validation-for="Symptom.Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Symptom.Description" class="form-label"></label>
+        <textarea asp-for="Symptom.Description" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Symptom.Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Symptom.DateLogged" class="form-label"></label>
+        <input asp-for="Symptom.DateLogged" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Symptom.DateLogged" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="/ChildDetails" asp-route-id="@Model.Symptom.ChildId" class="btn btn-secondary ms-2">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

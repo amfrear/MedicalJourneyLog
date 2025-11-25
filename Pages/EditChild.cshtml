@@ -1,0 +1,30 @@
+@page "{id:int}"
+@model MedicalJourneyLog.Pages.EditChildModel
+@{
+    ViewData["Title"] = "Edit Child";
+}
+
+<h2>Edit Child</h2>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Child.Name" class="form-label"></label>
+        <input asp-for="Child.Name" class="form-control" />
+        <span asp-validation-for="Child.Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Child.DateOfBirth" class="form-label"></label>
+        <input asp-for="Child.DateOfBirth" type="date" class="form-control" />
+        <span asp-validation-for="Child.DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="/ChildDetails" asp-route-id="@Model.Child.Id" class="btn btn-secondary ms-2">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{7BE296A8-C8FF-4CFD-B2E1-774ADCFEEE3F}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MedicalJourneyLog PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/LogSymptom.cshtml.cs">
+    <Files>
+      <File FileName="Pages/ChildDetails.cshtml.cs" Line="51" Column="104" />
+      <File FileName="Pages/LogChild.cshtml.cs" Line="61" Column="2" />
+      <File FileName="Pages/LogSymptom.cshtml.cs" Line="94" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MedicalJourneyLog" expanded="True">
+            <Node name="MedicalJourneyLog" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="ChildDetails.cshtml" expanded="True" />
+                <Node name="LogChild.cshtml" expanded="True" />
+                <Node name="LogSymptom.cshtml" expanded="True">
+                  <Node name="LogSymptom.cshtml.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
