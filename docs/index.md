@@ -173,7 +173,7 @@ The application is designed for local, personal use and does not implement multi
 
 Full source code is available on GitHub:
 
-(https://github.com/amfrear/MedicalJourneyLog)
+<https://github.com/amfrear/MedicalJourneyLog>
 
 ---
 
