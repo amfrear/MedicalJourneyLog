@@ -173,7 +173,7 @@ The application is designed for local, personal use and does not implement multi
 
 Full source code is available on GitHub:
 
-https://github.com/amfrear/CST452/tree/main/Milestone 6
+https://github.com/amfrear/MedicalJourneyLog
 
 ---
 
