@@ -87,21 +87,21 @@ The Medical Journey Log is built using a layered architecture:
 ### Child Management
 
 - Add new child profiles with name and date of birth.
-- Edit existing child information.
-- Delete children, with guard logic that prevents deletion if they still have symptom records.
+- Edit existing child information when details change.
+- Delete children **only** after all related symptoms have been intentionally removed (guarded delete behavior).
 
 ### Symptom Tracking
 
-- Log new symptom entries for a selected child.
-- Edit existing symptoms to correct or clarify information.
-- Delete symptoms when no longer needed.
-- View a full, date-ordered symptom history on the child details page.
+- Log new symptom entries for a selected child, including description and date.
+- Edit existing symptom entries to correct or clarify information.
+- Delete symptoms that are no longer needed.
+- View a child’s full, date-ordered symptom history on the Child Details page.
 
 ### Data Integrity and Safety
 
-- Guarded delete behavior so a child cannot be deleted while symptoms exist.
-- Required field validation on all forms.
-- Relational database structure ensures consistent, connected data.
+- Guarded delete logic prevents a child from being deleted while symptom records still exist.
+- Required field validation on all forms helps keep the data clean and consistent.
+- A relational MySQL schema ensures each symptom is always tied to exactly one child.
 
 ---
 
@@ -115,14 +115,6 @@ Typical caregiver workflow:
 4. Use Edit or Delete on symptoms when updates or removals are needed.
 5. Use Edit Child to update demographic data if needed.
 6. Use Delete Child only after all symptom records have been intentionally removed.
-
-*(You can optionally add screenshots here, for example:)*
-
-```markdown
-![Home Page](./images/home-page.png)
-![Child Details](./images/child-details.png)
-![Log Symptom](./images/log-symptom.png)
-```
 
 ---
 
