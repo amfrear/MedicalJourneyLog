@@ -50,7 +50,7 @@ The Medical Journey Log is built using a layered architecture:
 
 ### Architecture Diagram
 
-<img src="./images/architecture-diagram.png" width="700">
+<img src="./images/architecture-diagram.png" width="400">
 
 ---
 
