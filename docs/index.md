@@ -78,11 +78,7 @@ The Medical Journey Log is built using a layered architecture:
 
 ### ER Diagram
 
-*(Insert your ER diagram image here once uploaded, for example:)*
-
-```markdown
-![ER Diagram](./images/er-diagram.png)
-```
+<img src="./images/er-diagram.png" width="400">
 
 ---
 
