@@ -161,11 +161,23 @@ The application is designed for local, personal use and does not implement multi
 
 ## Demonstration Videos
 
-- **Application Walkthrough:**  
-  https://www.loom.com/share/9252d31ce9064b70950d87a07015f02c
+### Application Walkthrough
 
-- **Code Review and Explanation:**  
-  https://www.loom.com/share/29e7e00f443d45c9b314e61060a7b9ab
+<a href="https://www.loom.com/share/9252d31ce9064b70950d87a07015f02c">
+  <img src="https://cdn.loom.com/sessions/thumbnails/9252d31ce9064b70950d87a07015f02c-4e05153e2f84e354-full-play.gif#t=0.1" width="300" />
+</a>
+
+[Watch the full video](https://www.loom.com/share/9252d31ce9064b70950d87a07015f02c)
+
+---
+
+### Code Review and Explanation
+
+<a href="https://www.loom.com/share/29e7e00f443d45c9b314e61060a7b9ab">
+  <img src="https://cdn.loom.com/sessions/thumbnails/29e7e00f443d45c9b314e61060a7b9ab-9a57219b73036aaf-full-play.gif#t=0.1" width="300" />
+</a>
+
+[Watch the full video](https://www.loom.com/share/29e7e00f443d45c9b314e61060a7b9ab)
 
 ---
 
