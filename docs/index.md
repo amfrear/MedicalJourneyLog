@@ -175,9 +175,9 @@ Full source code is available on GitHub:
 
 ## Technology Showcase Poster
 
-Download the poster (PDF):
+You can download the full poster here:
 
-(Insert poster link here)
+[Download Poster (PDF)](./MedicalJourneyLogShowcasePoster.pdf)
 
 ---
 
